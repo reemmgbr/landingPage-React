@@ -1,0 +1,18 @@
+.card {
+  position: relative;
+  overflow: hidden; /* لإخفاء الجزء الخارج من الطبقة */
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: -100%; /* يبدأ من خارج اليسار */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.5); /* طبقة زرقاء شفافة */
+  transition: transform 0.5s ease-in-out; /* الانتقال عند التحرك */
+}
+
+.card:hover .layer {
+  transform: translateX(100%);
+}
